@@ -4,29 +4,29 @@ This is empty on purpose! Your code to build the resume will go here.
 
 'use strict';
 
-var dataSymbol = '%data%';
-var i = 0;
-var j = 0;
+var dataSymbol = '%data%',
+i = 0,
+j = 0;
 
 var bio = {
-  "name": "Nathachai Thongniran",
-  "role": "Front-End Web Developer",
-  "contacts": {
-    "mobile": "+6684-661-2678",
-    "email": "inid3a@gmail.com",
-    "github": "jojoee",
-    "twitter": "@inid3a",
-    "location": "Chai Nat, Thailand"
+  name: 'Nathachai Thongniran',
+  role: 'Front-End Web Developer',
+  contacts: {
+    mobile: '+6684-661-2678',
+    email: 'inid3a@gmail.com',
+    github: 'jojoee',
+    twitter: '@inid3a',
+    location: 'Chai Nat, Thailand'
   },
-  "welcomeMessage": "Hi, How are you ? well I'm a developer. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quibusdam cum cupiditate, ex laudantium quae libero porro voluptas, reprehenderit consequuntur, nesciunt provident, doloribus est animi et qui quis eos earum quasi veritatis deserunt molestias eum error optio? Nam quaerat tempora porro ea, vitae ipsa adipisci accusantium doloremque placeat nemo qui id corporis sed. Corporis architecto, repellat natus ducimus numquam quas mollitia eos, explicabo, eaque amet tenetur libero. Doloribus sed voluptates omnis cum accusamus magnam atque, quae. Officiis repudiandae, corporis cum quidem. Assumenda iure illum consectetur voluptates accusantium quidem cupiditate quasi in est et vel doloremque debitis quo deserunt maiores recusandae necessitatibus quod molestiae at suscipit commodi asperiores nam, libero ullam.",
-  "skills": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "PHP",
-    "Node.js"
+  welcomeMessage: 'Hi, How are you ? well I\'m a developer. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quibusdam cum cupiditate, ex laudantium quae libero porro voluptas, reprehenderit consequuntur, nesciunt provident, doloribus est animi et qui quis eos earum quasi veritatis deserunt molestias eum error optio? Nam quaerat tempora porro ea, vitae ipsa adipisci accusantium doloremque placeat nemo qui id corporis sed. Corporis architecto, repellat natus ducimus numquam quas mollitia eos, explicabo, eaque amet tenetur libero. Doloribus sed voluptates omnis cum accusamus magnam atque, quae. Officiis repudiandae, corporis cum quidem. Assumenda iure illum consectetur voluptates accusantium quidem cupiditate quasi in est et vel doloremque debitis quo deserunt maiores recusandae necessitatibus quod molestiae at suscipit commodi asperiores nam, libero ullam.',
+  skills: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'PHP',
+    'Node.js'
   ],
-  "biopic": "images/avatar.jpg",
+  biopic: 'images/avatar.jpg',
   display: function() {
     var $header = $('#header');
     var $topContacts = $('#topContacts');
@@ -61,37 +61,37 @@ var bio = {
       var $skills = $('#skills');
       for (i = 0; i < nSkills; i++) {
         $skills.append(HTMLskills.replace(dataSymbol, this.skills[i]));
-      };
+      }
     }
   }
 };
 bio.display();
 
 var education = {
-  "schools": [
+  schools: [
     {
-      "name": "King Mongkut's University of Technology Thonburi",
-      "location": "Chiang Mai, Thailand",
-      "degree": "Bachelor",
-      "majors": "Electronic and Telecommunication",
-      "dates": "2009 - 2012",
-      "url": "http://global.kmutt.ac.th/"
+      name: 'King Mongkut\'s University of Technology Thonburi',
+      location: 'Chiang Mai, Thailand',
+      degree: 'Bachelor',
+      majors: 'Electronic and Telecommunication',
+      dates: '2009 - 2012',
+      url: 'http://global.kmutt.ac.th/'
     },
     {
-      "name": "Taweethapisek",
-      "location": "Chonburi, Thailand",
-      "degree": "Senior High school",
-      "majors": "Math",
-      "dates": "2004 - 2009",
-      "url": "http://www.taweethapisek.ac.th/"
+      name: 'Taweethapisek',
+      location: 'Chonburi, Thailand',
+      degree: 'Senior High school',
+      majors: 'Math',
+      dates: '2004 - 2009',
+      url: 'http://www.taweethapisek.ac.th/'
     }
   ],
-  "onlineCourses": [
+  onlineCourses: [
     {
-      "title": "Front-End Web Developer Nanodegree",
-      "school": "Udacity",
-      "date": "2016",
-      "url": "https://www.udacity.com/"
+      title: 'Front-End Web Developer Nanodegree',
+      school: 'Udacity',
+      date: '2016',
+      url: 'https://www.udacity.com/'
     }
   ],
   display: function() {
@@ -137,27 +137,27 @@ var education = {
 education.display();
 
 var work = {
-  "jobs" : [
+  jobs : [
     {
-      "employer": "Gomeeki",
-      "title": "PHP Developer",
-      "location": "Nan, Thailand",
-      "dates": "July 2016 - Present",
-      "description": "Almost working on the front-end and wordpress"
+      employer: 'Gomeeki',
+      title: 'PHP Developer',
+      location: 'Nan, Thailand',
+      dates: 'July 2016 - Present',
+      description: 'Almost working on the front-end and wordpress'
     },
     {
-      "employer": "Exa Web Solutions",
-      "title": "Web Developer",
-      "location": "Nong Khai, Thailand",
-      "dates": "May 2014 - June 2016",
-      "description": "Create an entire website, requirement depend on each project - Frontend, Backend and a bit Graphic."
+      employer: 'Exa Web Solutions',
+      title: 'Web Developer',
+      location: 'Nong Khai, Thailand',
+      dates: 'May 2014 - June 2016',
+      description: 'Create an entire website, requirement depend on each project - Frontend, Backend and a bit Graphic.'
     },
     {
-      "employer": "Vevo Systems",
-      "title": "ASP.NET Developer",
-      "location": "Rayong, Thailand",
-      "dates": "Nov 2013 - April 2014",
-      "description": "Develop company's PMS (product management system) with Agile system and also support customer."
+      employer: 'Vevo Systems',
+      title: 'ASP.NET Developer',
+      location: 'Rayong, Thailand',
+      dates: 'Nov 2013 - April 2014',
+      description: 'Develop company\'s PMS (product management system) with Agile system and also support customer.'
     }
   ],
   display: function() {
@@ -184,31 +184,31 @@ var work = {
 work.display();
 
 var projects = {
-  "projects": [
+  projects: [
     {
-      "title": "Jojoee.com",
-      "dates": "2014",
-      "description": "My personal website",
-      "images": [
-        "images/jojoee/1.jpg"
+      title: 'Jojoee.com',
+      dates: '2014',
+      description: 'My personal website',
+      images: [
+        'images/jojoee/1.jpg'
       ]
     },
     {
-      "title": "Classic CV",
-      "dates": "2015",
-      "description": "FREE Classic CV / Resume HTML Template",
-      "images": [
-        "images/classic-cv/1.jpg",
-        "images/classic-cv/2.jpg"
+      title: 'Classic CV',
+      dates: '2015',
+      description: 'FREE Classic CV / Resume HTML Template',
+      images: [
+        'images/classic-cv/1.jpg',
+        'images/classic-cv/2.jpg'
       ]
     },
     {
-      "title": "KiKi",
-      "dates": "2016",
-      "description": "KiKi - The Sacrifice on Global Game Jam 2016",
-      "images": [
-        "images/kiki/1.png",
-        "images/kiki/2.png"
+      title: 'KiKi',
+      dates: '2016',
+      description: 'KiKi - The Sacrifice on Global Game Jam 2016',
+      images: [
+        'images/kiki/1.png',
+        'images/kiki/2.png'
       ]
     }
   ],
