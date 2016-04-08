@@ -18,7 +18,7 @@ var bio = {
     "twitter": "@inid3a",
     "location": "Chai Nat, Thailand"
   },
-  "welcomeMessage": "Hi, How are you ? well I'm a developer.",
+  "welcomeMessage": "Hi, How are you ? well I'm a developer. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quibusdam cum cupiditate, ex laudantium quae libero porro voluptas, reprehenderit consequuntur, nesciunt provident, doloribus est animi et qui quis eos earum quasi veritatis deserunt molestias eum error optio? Nam quaerat tempora porro ea, vitae ipsa adipisci accusantium doloremque placeat nemo qui id corporis sed. Corporis architecto, repellat natus ducimus numquam quas mollitia eos, explicabo, eaque amet tenetur libero. Doloribus sed voluptates omnis cum accusamus magnam atque, quae. Officiis repudiandae, corporis cum quidem. Assumenda iure illum consectetur voluptates accusantium quidem cupiditate quasi in est et vel doloremque debitis quo deserunt maiores recusandae necessitatibus quod molestiae at suscipit commodi asperiores nam, libero ullam.",
   "skills": [
     "HTML",
     "CSS",
@@ -49,14 +49,14 @@ var bio = {
 
     // bio
     $header.append(
-      HTMLbioPic.replace(dataSymbol, this.biopic) +
-      HTMLwelcomeMsg.replace(dataSymbol, this.welcomeMessage)
+      '<div class="col-md-4">' + HTMLbioPic.replace(dataSymbol, this.biopic) + '</div>' +
+      '<div class="col-md-8">' + HTMLwelcomeMsg.replace(dataSymbol, this.welcomeMessage) + '</div>'
     );
 
     // skill
     var nSkills = this.skills.length;
     if (nSkills > 0) {
-      $header.append(HTMLskillsStart);
+      $header.append('<div class="col-md-12">' + HTMLskillsStart + '</div>');
 
       var $skills = $('#skills');
       for (i = 0; i < nSkills; i++) {
@@ -240,7 +240,6 @@ var projects = {
 projects.display();
 
 function inName(name) {
-  console.log(name);
   if (!name) {
     name = bio.name;
   }
@@ -259,5 +258,7 @@ var $mapDiv = $('#mapDiv');
 $mapDiv.append(googleMap);
 
 // internationalize
-var $main = $('#main');
-$main.append(internationalizeButton);
+var $main = $('#main'); // unused
+var $name = $('#name'); // unused
+var $role = $('.role');
+$role.append(internationalizeButton);

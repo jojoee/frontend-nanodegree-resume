@@ -1,233 +1,58 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding:0;
-  margin:0;
-  font-family: monospace, sans-serif;
-}
+/*================================================================ VARIABLE
+*/
 
-.clear-fix {
-  overflow: auto;
-}
+$orange: #f5ae23;
+$white: #fff;
+$black: #000;
+$grey: #eee;
+$dark-grey: #adadad;
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
+// space
+$space1: 6px;
+$space2: 12px;
+$space3: 18px;
+$space4: 24px;
+$space5: 30px;
+$space6: 36px;
+$space7: 42px;
+$space8: 48px;
+$space9: 54px;
+$space10: 60px;
+$space11: 66px;
+$space12: 72px;
+$space13: 78px;
+$space14: 84px;
+$space15: 90px;
 
-.project-entry a {
-  clear: both;
-}
+// breakpoint
+// from bootstrap breakpoint
+$screen-xs:     480px !default;
+$screen-xs-min: $screen-xs !default;
 
-h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
-}
+$screen-sm:     768px !default;
+$screen-sm-min: $screen-sm !default;
 
-h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
-}
+$screen-md:     992px !default;
+$screen-md-min: $screen-md !default;
 
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
-}
+$screen-lg:     1200px !default;
+$screen-lg-min: $screen-lg !default;
 
-h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
-}
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
 
-h2,
-h3,
-h4,
-h5 {
-  padding:10px 5%;
+/*
+@media (max-width: $screen-xs-max) { ... }
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { ... }
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { ... }
+@media (min-width: $screen-lg-min) { ... }
+*/
 
-}
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
-}
-
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-}
-
-p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
-}
-
-a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #000;
-  line-height: 28px;
-}
-
-#skills {
-  float: left;
-  display: block;
-}
-
-#skills-h3 {
-  color: #f5ae23;
-}
-
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.dark-text {
-  font-weight: bold;
-  color: #000;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-}
-
-img {
-  padding: 10px;
-}
-
-span {
-  padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
-
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
-}
-
-#map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
-}
-
-/*================================================================ MAIN
+/*================================================================ GLOBAL
 */
 
 body {
-  // background-image: url("../images/bg.jpg");
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
@@ -253,4 +78,144 @@ body {
   margin: 18px 0;
   padding: 24px;
   overflow-x: hidden;
+}
+
+.orange-text {
+  color: $orange;
+}
+
+.white-text {
+  color: $white;
+}
+
+.dark-text {
+  color: $black;
+}
+
+/*================================================================ HEADER
+*/
+
+#header {
+  
+  img {
+    width: 100%;
+    margin-bottom: $space3;
+
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  .role {
+
+    button {
+      margin-left: $space3;
+    }
+  }
+}
+
+#topContacts {
+  padding: 0;
+  margin: 0;
+  margin-bottom: $space4;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  li {
+    list-style: none;
+    margin-right: $space1;
+
+    .orange-text {
+      text-transform: uppercase;
+
+      &:after {
+        content: '';
+        margin-right: $space1;
+      }
+    }
+  }
+}
+
+/*================================================================ WORK
+*/
+
+.location-text {
+  float: right;
+  color: $dark-grey;
+}
+
+.work-title {
+  display: block;
+  border-top: 1px solid $grey;
+  padding-top: $space3;
+
+  &:first-child {
+    padding-top: 0;
+    border-top: 0;
+  }
+}
+
+/*================================================================ PROJECT
+*/
+
+.project-entry {
+
+  img {
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: $space3;
+    }
+  }
+}
+
+.project-title {
+  clear: both;
+  display: block;
+  font-size: 22px;
+  padding-top: $space3;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+/*================================================================ EDUCATION
+*/
+
+.education-title {
+  display: block;
+  padding-top: $space3;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+/*================================================================ MAP
+*/
+
+#mapDiv {
+
+}
+
+#map {
+  display: block;
+  height: 400px;
+}
+
+/*================================================================ FOOTER CONTACT
+*/
+
+#lets-connect {
+
+  h2 {
+    margin-bottom: $space4;
+  }
+}
+
+#footerContacts {
+
+  @extend #topContacts;
+  margin-bottom: 0;
 }
