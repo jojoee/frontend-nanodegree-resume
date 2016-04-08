@@ -4,7 +4,6 @@ This is empty on purpose! Your code to build the resume will go here.
 
 'use strict';
 
-var $main = $('#main');
 var dataSymbol = '%data%';
 var i = 0;
 var j = 0;
@@ -17,7 +16,7 @@ var bio = {
     "email": "inid3a@gmail.com",
     "github": "jojoee",
     "twitter": "@inid3a",
-    "location": "Bangkok, Thailand"
+    "location": "Chai Nat, Thailand"
   },
   "welcomeMessage": "Hi, How are you ? well I'm a developer.",
   "skills": [
@@ -72,7 +71,7 @@ var education = {
   "schools": [
     {
       "name": "King Mongkut's University of Technology Thonburi",
-      "location": "Bangkok, Thailand",
+      "location": "Chiang Mai, Thailand",
       "degree": "Bachelor",
       "majors": "Electronic and Telecommunication",
       "dates": "2009 - 2012",
@@ -80,7 +79,7 @@ var education = {
     },
     {
       "name": "Taweethapisek",
-      "location": "Bangkok, Thailand",
+      "location": "Chonburi, Thailand",
       "degree": "Senior High school",
       "majors": "Math",
       "dates": "2004 - 2009",
@@ -142,21 +141,21 @@ var work = {
     {
       "employer": "Gomeeki",
       "title": "PHP Developer",
-      "location": "Bangkok, Thailand",
+      "location": "Nan, Thailand",
       "dates": "July 2016 - Present",
       "description": "Almost working on the front-end and wordpress"
     },
     {
       "employer": "Exa Web Solutions",
       "title": "Web Developer",
-      "location": "Bangkok, Thailand",
+      "location": "Nong Khai, Thailand",
       "dates": "May 2014 - June 2016",
       "description": "Create an entire website, requirement depend on each project - Frontend, Backend and a bit Graphic."
     },
     {
       "employer": "Vevo Systems",
       "title": "ASP.NET Developer",
-      "location": "Bangkok, Thailand",
+      "location": "Rayong, Thailand",
       "dates": "Nov 2013 - April 2014",
       "description": "Develop company's PMS (product management system) with Agile system and also support customer."
     }
@@ -240,6 +239,25 @@ var projects = {
 };
 projects.display();
 
+function inName(name) {
+  console.log(name);
+  if (!name) {
+    name = bio.name;
+  }
+
+  name = name.replace(/  +/g, ' ');
+  var names = name.trim().split(' ');
+
+  var firstName = names[0];
+  var lastName = names[1].toUpperCase();
+
+  return firstName + ' ' + lastName;
+}
+
 // google map
 var $mapDiv = $('#mapDiv');
 $mapDiv.append(googleMap);
+
+// internationalize
+var $main = $('#main');
+$main.append(internationalizeButton);

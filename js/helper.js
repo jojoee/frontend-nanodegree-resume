@@ -64,8 +64,8 @@ The International Name challenge in Lesson 2 where you'll create a function that
 */
 $(document).ready(function() {
   $('button').click(function() {
-    var iName = inName() || function(){};
-    $('#name').html(iName);  
+    var iName = inName() || function() {};
+    $('#name').html(iName);
   });
 });
 
@@ -74,7 +74,7 @@ The next few lines about clicks are for the Collecting Click Locations quiz in L
 */
 clickLocations = [];
 
-function logClicks(x,y) {
+function logClicks(x, y) {
   clickLocations.push(
     {
       x: x,
@@ -86,6 +86,7 @@ function logClicks(x,y) {
 
 $(document).click(function(loc) {
   // your code goes here!
+  logClicks(loc.clientX, loc.clientY);
 });
 
 
@@ -106,7 +107,9 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    mapTypeControl: true,
+    scaleControl: true,
+    scrollwheel: false
   };
 
   /* 
@@ -132,7 +135,7 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide: 
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
+    education.schools.forEach(function(school) {
       locations.push(school.location);
     });
 
@@ -140,7 +143,7 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide: 
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    work.jobs.forEach(function(job){
+    work.jobs.forEach(function(job) {
       locations.push(job.location);
     });
 
@@ -177,6 +180,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -209,7 +213,7 @@ function initializeMap() {
     var service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
-      locations.forEach(function(place){
+      locations.forEach(function(place) {
       // the search request object
       var request = {
         query: place
@@ -243,6 +247,6 @@ window.addEventListener('load', initializeMap);
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
+  // Make sure the map bounds get updated on page resize
   map.fitBounds(mapBounds);
 });
