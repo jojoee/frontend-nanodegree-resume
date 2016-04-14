@@ -5,8 +5,8 @@ This is empty on purpose! Your code to build the resume will go here.
 /*jshint strict:false */
 
 var dataSymbol = '%data%',
-i = 0,
-j = 0;
+  i = 0,
+  j = 0;
 
 var bio = {
   name: 'Nathachai Thongniran',
@@ -240,10 +240,7 @@ var projects = {
 projects.display();
 
 function inName(name) {
-  if (!name) {
-    name = bio.name;
-  }
-
+  name = (!name) ? bio.name : name;
   name = name.replace(/  +/g, ' ');
   var names = name.trim().split(' ');
 
